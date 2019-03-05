@@ -33,7 +33,6 @@ public class Main {
         else {
             System.out.println("You grow up so fast.");
         }
-// This is a comment.
 
     }
 }
