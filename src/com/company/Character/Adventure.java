@@ -3,11 +3,19 @@ package com.company.Character;
 public class Adventure {
     public static void main(String[] args) {
         Character adam = new Character();
-        // this is like int x = 3
         Weapon sword = new Weapon();
+        //He's created two objects. Object adam and Object sword.
+
         adam.equip(sword);
+        //Object adam pulled from "Character". Run "equip" method and when you do, use "sword" as your number.
+
         System.out.println(adam.attack());
+
+        //my own tryout
+        sword.joe(23);
+
     }
+
 
     // Name a random Class. Set random stats. Name a weapon randomly.
 }
