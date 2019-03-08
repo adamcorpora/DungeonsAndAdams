@@ -11,11 +11,6 @@ public class Adventure {
 
         System.out.println(adam.attack());
 
-        //my own tryout
-        sword.joe(23);
-
     }
 
-
-    // Name a random Class. Set random stats. Name a weapon randomly.
 }
