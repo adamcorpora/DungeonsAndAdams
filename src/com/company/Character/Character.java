@@ -1,4 +1,6 @@
 package com.company.Character;
+import java.util.Arrays;
+import java.util.List;
 import java.util.Random;
 
 public class Character {
@@ -11,6 +13,9 @@ public class Character {
     Weapon emptyhand;
     int sum;
 
+    List<String> nameList = Arrays.asList("Adam", "Ben", "Meech", "Natalie");
+    int na = (int) (Math.random() * nameList.size());
+
     public Character() {
         this.strength = (Roll(3,18));
         this.dexterity = (Roll(3,18));
@@ -18,7 +23,7 @@ public class Character {
         this.wisdom = (Roll(3,18));
         this.intelligence = (Roll(3,18));
         this.charisma = (Roll(3,18));
-        System.out.println("A character named Adam created with:");
+        System.out.println("A character named " + nameList.get(na) + " created with:");
         System.out.println(strength + " Strength");
         System.out.println(dexterity + " Dexterity");
         System.out.println(constitution + " Constitution");
@@ -33,7 +38,7 @@ public class Character {
 
     public int attack() {
         this.sum = strength + emptyhand.damage;
-        System.out.println("\n" + "Adam strikes! It does " + sum + " total damage. ( " + emptyhand.dice1 + "(d8) + "
+        System.out.println("\n" + nameList.get(na) + " strikes! It does " + sum + " total damage. ( " + emptyhand.dice1 + "(d8) + "
                 + emptyhand.dice2 + "(d8) + " + emptyhand.dice3 + "(d8) + " + strength + "(from Strength) )");
         return 0;
     }
@@ -41,6 +46,6 @@ public class Character {
 
     public void equip(Weapon foundweapon) {
         this.emptyhand = foundweapon;
-        System.out.println("\n" + "Adam equipped the " + emptyhand.type + "! It does 3d8 + Strength damage!");
+        System.out.println("\n" + nameList.get(na) + " equipped the " + emptyhand.type + "! It does 3d8 + Strength damage!");
     }
 }
