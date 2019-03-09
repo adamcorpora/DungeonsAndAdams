@@ -1,42 +1,46 @@
 package com.company.Character;
-
 import java.util.Random;
 
 public class Character {
-    String[] attributes = {" strength", " dexterity", " constitution", " wisdom", " intelligence", " charisma"};
+    int strength;
+    int dexterity;
+    int constitution;
+    int wisdom;
+    int intelligence;
+    int charisma;
+    Weapon emptyhand;
+    int sum;
 
     public Character() {
+        this.strength = (Roll(3,18));
+        this.dexterity = (Roll(3,18));
+        this.constitution = (Roll(3,18));
+        this.wisdom = (Roll(3,18));
+        this.intelligence = (Roll(3,18));
+        this.charisma = (Roll(3,18));
         System.out.println("A character named Adam created with:");
-        for (int i = 0; i < 6; i++) {
-            int random = (int) (Math.random() * 17 + 1);
-            System.out.println(random + attributes[i]);
+        System.out.println(strength + " Strength");
+        System.out.println(dexterity + " Dexterity");
+        System.out.println(constitution + " Constitution");
+        System.out.println(wisdom + " Wisdom");
+        System.out.println(intelligence + " Intelligence");
+        System.out.println(charisma + " Charisma");
         }
-    }
 
-    int sum = 0;
+    private static int Roll (int max, int min) {
+        return (int) (Math.random() * (max - min) + min);
+    }
 
     public int attack() {
-        System.out.println("\n" + "Adam equipped a sword! It does 3d12 damage plus strength damage!" + "\n");
-        System.out.print("Adam strikes! The rolls are");
-        for (int j = 0; j < 3; j++) {
-            int roll = D12();
-            sum += roll;
-            System.out.print(" " + roll + "(d12) +");
-        }
-        Random random = new Random();
-        int index = random.nextInt(attributes.length);
-        System.out.print(attributes[index] + " modifier");
-        //how do I pull out the randomly generated number for the random attribute?
-        System.out.print("\n" + "The total damage is ");
-        return sum;
+        this.sum = strength + emptyhand.damage;
+        System.out.println("\n" + "Adam strikes! It does " + sum + " total damage. ( " + emptyhand.dice1 + "(d8) + "
+                + emptyhand.dice2 + "(d8) + " + emptyhand.dice3 + "(d8) + " + strength + "(from Strength) )");
+        return 0;
     }
 
-    private static int D12() {
-        return (int) (Math.random() * 11 + 1);
-    }
 
-    public void equip(Weapon sword) {
-
+    public void equip(Weapon foundweapon) {
+        this.emptyhand = foundweapon;
+        System.out.println("\n" + "Adam equipped the " + emptyhand.type + "! It does 3d8 + Strength damage!");
     }
 }
-    weapon equipped weapon=

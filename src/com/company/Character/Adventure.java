@@ -2,14 +2,12 @@ package com.company.Character;
 
 public class Adventure {
     public static void main(String[] args) {
-        Character adam = new Character();
-        Weapon sword = new Weapon();
-        //He's created two objects. Object adam and Object sword.
+        Character emptyshell = new Character();
+        Weapon selectedweapon = new Weapon();
 
-        adam.equip(sword);
-        //Object adam pulled from "Character". Run "equip" method and when you do, use "sword" as your number.
+        emptyshell.equip(selectedweapon);
 
-        System.out.println(adam.attack());
+        System.out.println(emptyshell.attack());
 
     }
 
