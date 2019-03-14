@@ -21,6 +21,7 @@ public class Adventure {
         bev.sneakyStabbies();
 
         Jeff.equip(selectedweapon);
+        // I made a number 2
 
         System.out.println(Jeff.attack());
     }
