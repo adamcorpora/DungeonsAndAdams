@@ -13,9 +13,10 @@ public class Weapon {
     List<String> weaponList = Arrays.asList("Sword of Sexiness", "Club", "Spear", "Dagger");
     int we = (int) (Math.random() * weaponList.size());
 
-    public Weapon () {
-        this.type = weaponList.get(we);
-        this.damage = dice1 + dice2 + dice3;
+    public Weapon (String type) {
+        this.type = type;
+//        this.type = weaponList.get(we);
+//        this.damage = dice1 + dice2 + dice3;
 
     }
     }

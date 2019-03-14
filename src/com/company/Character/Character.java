@@ -1,7 +1,6 @@
 package com.company.Character;
 import java.util.Arrays;
 import java.util.List;
-import java.util.Random;
 
 public class Character {
     int strength;
@@ -16,7 +15,7 @@ public class Character {
     List<String> nameList = Arrays.asList("Adam", "Ben", "Meech", "Natalie");
     int na = (int) (Math.random() * nameList.size());
 
-    public Character() {
+    public Character(Weapon type) {
         this.strength = (Roll(3,18));
         this.dexterity = (Roll(3,18));
         this.constitution = (Roll(3,18));

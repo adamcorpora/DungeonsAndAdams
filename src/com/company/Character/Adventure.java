@@ -2,12 +2,13 @@ package com.company.Character;
 
 public class Adventure {
     public static void main(String[] args) {
-        Character emptyshell = new Character();
-        Weapon selectedweapon = new Weapon();
+        Character Adam = new Character(new Weapon ("ax"));
+        Character Jeff = new Character(new Weapon("Flail"));
+        Weapon selectedweapon = new Weapon("sword");
 
-        emptyshell.equip(selectedweapon);
+        Jeff.equip(selectedweapon);
 
-        System.out.println(emptyshell.attack());
+        System.out.println(Jeff.attack());
 
     }
 
