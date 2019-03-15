@@ -12,6 +12,7 @@ public class Character {
     Weapon emptyhand;
     int sum;
 
+
     List<String> nameList = Arrays.asList("Adam", "Ben", "Meech", "Natalie");
     int na = (int) (Math.random() * nameList.size());
 

@@ -6,17 +6,13 @@ package com.company.Character;
 public class Weapon {
     int damage;
     String type;
-    int dice1 = (int) (Math.random() * 7 + 1);
-    int dice2 = (int) (Math.random() * 7 + 1);
-    int dice3 = (int) (Math.random() * 7 + 1);
+    int dice1 = 3;
+    int dice2 = 4;
+    int dice3 = 5;
 
-    List<String> weaponList = Arrays.asList("Sword of Sexiness", "Club", "Spear", "Dagger");
-    int we = (int) (Math.random() * weaponList.size());
-
-    public Weapon (String type) {
+    public Weapon (String type, int damage) {
         this.type = type;
-//        this.type = weaponList.get(we);
-//        this.damage = dice1 + dice2 + dice3;
+        this.damage = damage;
 
     }
     }
