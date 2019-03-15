@@ -9,6 +9,10 @@ public class Adventure {
 
         System.out.println("\n");
 
+        DiceRoll roll = new DiceRoll(3,12); // 3d12
+        int result = roll.roll();
+        System.out.println(result);  //should be some random number between 3 and 36
+
         Wizard Joe = new Wizard ();
         Joe.castSpells();
         Joe.dispelMagic();

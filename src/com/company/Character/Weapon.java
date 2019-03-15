@@ -12,7 +12,7 @@ public class Weapon {
 
     public Weapon (String type, int damage) {
         this.type = type;
-        this.damage = damage;
+        this.damage = 8;
 
     }
     }
