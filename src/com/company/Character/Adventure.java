@@ -3,9 +3,9 @@ package com.company.Character;
 public class Adventure {
     public static void main(String[] args) {
 
-        Character Adam = new Character(new Weapon ("ax", 2));
+        Character Adam = new Character(new Weapon (2, "ax"));
 
-        Weapon selectedweapon = new Weapon("sword", 3);
+        Weapon selectedweapon = new Weapon(3, "sword");
 
         System.out.println("\n");
 
