@@ -10,11 +10,10 @@ public class DiceRoll {
 
     public DiceRoll (int diceQuantity, int diceFaces) {
         this.diceFaces = diceFaces;
-        this.total = (int) (Math.random() * ((diceFaces*diceQuantity) - diceQuantity) + diceQuantity);
         this.diceQuantity = diceQuantity;
     }
     public int roll () {
         this.roll = total;
-        return roll;
+        return (int) (Math.random() * ((diceFaces*diceQuantity) - diceQuantity) + diceQuantity);
     }
 }
