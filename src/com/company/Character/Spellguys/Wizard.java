@@ -1,4 +1,4 @@
-package com.company.Character;
+package com.company.Character.Spellguys;
 
 public class Wizard extends Spellcaster {
 

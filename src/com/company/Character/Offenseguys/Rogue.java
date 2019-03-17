@@ -1,4 +1,4 @@
-package com.company.Character;
+package com.company.Character.Offenseguys;
 
 public class Rogue extends Offense {
 

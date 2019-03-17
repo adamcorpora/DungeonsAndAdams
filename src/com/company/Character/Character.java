@@ -11,19 +11,20 @@ public class Character {
     int charisma;
     Weapon emptyhand;
     int sum;
+    DiceRoll go = new DiceRoll(3,6);
 
 
-    List<String> nameList = Arrays.asList("Adam", "Ben", "Meech", "Natalie");
+    List<String> nameList = Arrays.asList("Adam", "Ben", "Meech", "Natalie", "Gwen", "Ellie", "Nathan", "Heather");
     int na = (int) (Math.random() * nameList.size());
 
-    public Character(Weapon type) {
-        this.strength = (Roll(3,18));
-        this.dexterity = (Roll(3,18));
-        this.constitution = (Roll(3,18));
-        this.wisdom = (Roll(3,18));
-        this.intelligence = (Roll(3,18));
-        this.charisma = (Roll(3,18));
-        System.out.println("A character named " + nameList.get(na) + " created with:");
+    public Character() {
+        this.strength = go.roll();
+        this.dexterity = go.roll();
+        this.constitution = go.roll();
+        this.wisdom = go.roll();
+        this.intelligence = go.roll();
+        this.charisma = go.roll();
+        System.out.println("\n" + "A character named " + nameList.get(na) + " created with:");
         System.out.println(strength + " Strength");
         System.out.println(dexterity + " Dexterity");
         System.out.println(constitution + " Constitution");
@@ -32,9 +33,6 @@ public class Character {
         System.out.println(charisma + " Charisma");
         }
 
-    private static int Roll (int max, int min) {
-        return (int) (Math.random() * (max - min) + min);
-    }
 
     public int attack() {
         this.sum = strength + emptyhand.damage;

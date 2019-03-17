@@ -1,9 +1,12 @@
 package com.company.Character;
 
+import com.company.Character.Spellguys.Cleric;
+import com.company.Character.Offenseguys.Fighter;
+import com.company.Character.Offenseguys.Rogue;
+import com.company.Character.Spellguys.Wizard;
+
 public class Adventure {
     public static void main(String[] args) {
-
-        Character Adam = new Character(new Weapon ("ax", 2));
 
         Weapon selectedweapon = new Weapon("sword", 3);
 
@@ -11,7 +14,7 @@ public class Adventure {
 
         DiceRoll roll = new DiceRoll(3,12); // 3d12
         int result = roll.roll();
-        System.out.println(result);  //should be some random number between 3 and 36
+        System.out.println("Assignment Number One: " + result);  //should be some random number between 3 and 36
 
         Wizard Joe = new Wizard ();
         Joe.castSpells();
@@ -21,7 +24,7 @@ public class Adventure {
         Bob.castSpells();
         Bob.turnUndead();
 
-        Fighter Julie = new Fighter();
+        Fighter Julie = new Fighter ();
         Julie.bustHeads();
         Julie.actionSurge();
 
@@ -29,13 +32,6 @@ public class Adventure {
         Gwen.bustHeads();
         Gwen.sneakAttack();
 
-
-
-
-
-        Adam.equip(selectedweapon);
-
-        System.out.println(Adam.attack());
 
     }
 

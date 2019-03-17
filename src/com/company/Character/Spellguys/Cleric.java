@@ -1,4 +1,6 @@
-package com.company.Character;
+package com.company.Character.Spellguys;
+
+import com.company.Character.Spellguys.Spellcaster;
 
 public class Cleric extends Spellcaster {
 
