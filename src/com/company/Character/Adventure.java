@@ -31,7 +31,7 @@ public class Adventure {
         Rogue Gwen = new Rogue ();
         Gwen.bustHeads();
         Gwen.sneakAttack();
-
+        
 
     }
 
