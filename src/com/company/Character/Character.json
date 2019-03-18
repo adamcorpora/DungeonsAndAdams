@@ -1,0 +1,19 @@
+[
+  {"name": "Adam",
+  "class": "Wizard",
+  "race": "Elf",
+  "proficientIn": ["Arcana", "History", "Religion", "Percpetion"],
+  "weapon": "Quarterstaff",
+  "ability": "Cast Spells",
+  "spells": [{
+      "name": "Magic Missile",
+      "level": 1,
+      "range": 60},
+    {"name": "Burning Hands",
+      "level": 1,
+      "range": 30},
+    {"name": "Zone of Truth",
+    "level": 2,
+    "range": 100}]
+  }
+]
