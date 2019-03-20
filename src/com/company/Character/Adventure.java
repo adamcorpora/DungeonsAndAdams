@@ -28,9 +28,10 @@ public class Adventure {
         Julie.bustHeads();
         Julie.actionSurge();
 
-        Rogue Gwen = new Rogue ();
-        Gwen.bustHeads();
-        Gwen.sneakAttack();
+        Rogue Ellie = new Rogue ();
+        Ellie.bustHeads();
+        Ellie.sneakAttack();
+
         
 
     }
